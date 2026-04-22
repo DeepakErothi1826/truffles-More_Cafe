@@ -5,6 +5,7 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/truffles-More_Cafe/',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
