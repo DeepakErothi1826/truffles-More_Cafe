@@ -10,7 +10,7 @@ const Home = () => {
 
   const slides = [
     {
-      image: "/Images/side_coffee_Hero.png",
+      image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
       image2: "/coffee-hero.png",
       headline: "Welcome to Truffles & More",
       subheadline: "Artisan Bakery & Coffee House",
@@ -20,7 +20,7 @@ const Home = () => {
       ctaLink: "/about"
     },
     {
-      image: "/Images/side_coffee_Hero.png",
+      image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
       image2: "/coffee-hero.png",
       headline: "Handcrafted Perfection",
       subheadline: "Baked with Passion",
@@ -30,7 +30,7 @@ const Home = () => {
       ctaLink: "/products"
     },
     {
-      image: "/Images/side_coffee_Hero.png",
+      image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
       image2: "/coffee-hero.png",
       headline: "Fresh Daily Bakes",
       subheadline: "Baked Fresh Every Morning",
@@ -40,7 +40,7 @@ const Home = () => {
       ctaLink: "/products"
     },
     {
-      image: "/Images/side_coffee_Hero.png",
+      image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
       image2: "/coffee-hero.png",
       headline: "Delight in every Bite!",
       subheadline: "Experience True Indulgence",
@@ -73,42 +73,42 @@ const Home = () => {
     {
       title: "Cakes",
       desc: "Artisan cakes for every celebration.",
-      image: "/Images/Chocolate Cake & Berry Dessert.jpg",
+      image: "/truffles-More_Cafe/Images/Chocolate Cake & Berry Dessert.jpg",
     },
     {
       title: "Macarons",
       desc: "Delicate French macarons in assorted flavors.",
-      image: "/Images/macarons.jpg",
+      image: "/truffles-More_Cafe/Images/macarons.jpg",
     },
     {
       title: "Cupcakes",
       desc: "Bite-sized masterpieces of flavor.",
-      image: "/Images/Chocolate Truffle Cupcake – Gold Hazelnut Luxury.jpg",
+      image: "/truffles-More_Cafe/Images/Chocolate Truffle Cupcake – Gold Hazelnut Luxury.jpg",
     },
     {
       title: "Pastries",
       desc: "Flaky pastries and sweet treats.",
-      image: "/Images/Blueberry Lavender Tartlet.jpg",
+      image: "/truffles-More_Cafe/Images/Blueberry Lavender Tartlet.jpg",
     },
     {
       title: "Chocolates",
       desc: "Rich and decadent chocolates.",
-      image: "/Images/Mint Chocolate Dream Dessert.jpg",
+      image: "/truffles-More_Cafe/Images/Mint Chocolate Dream Dessert.jpg",
     },
     {
       title: "Cookies",
       desc: "Sweet and savory cookies.",
-      image: "/Images/Cream Cheese Stuffed Red Velvet Cookies – The Best 7 Tips.jpg",
+      image: "/truffles-More_Cafe/Images/Cream Cheese Stuffed Red Velvet Cookies – The Best 7 Tips.jpg",
     },
     {
       title: "Coffee",
       desc: "Premium coffee and drinks.",
-      image: "/Images/Starbucks Double Chocolate Chip Frappuccino - Insanely Good.jpg",
+      image: "/truffles-More_Cafe/Images/Starbucks Double Chocolate Chip Frappuccino - Insanely Good.jpg",
     },
     {
       title: "Premium Cakes",
       desc: "Luxury cakes for special occasions.",
-      image: "/Images/CAKE decor, AI art.jpg",
+      image: "/truffles-More_Cafe/Images/CAKE decor, AI art.jpg",
     }
   ];
 
