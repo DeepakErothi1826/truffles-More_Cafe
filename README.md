@@ -1,16 +1,59 @@
-# React + Vite
+# Truffles & More Cafe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An artisan bakery and coffee house website built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Hero Slider** - Auto-rotating slider with 4 slides showcasing bakery highlights
+  - Slide 1: No background images, text centered/left-aligned
+  - Slides 2-4: Background images with text centered/right-aligned
+  - Smooth animations with directional text effects
 
-## React Compiler
+- **Product Categories** - Grid display of cakes, macarons, cupcakes, pastries, chocolates, cookies, coffee, and premium cakes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **About Section** - "The Quest for Perfection" with feature highlights (Volcanic Cocoa, Gold Standard, High-Altitude Brew)
 
-## Expanding the ESLint configuration
+- **Holiday Promo** - Limited edition seasonal offers
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Customer Testimonials** - Reviews from satisfied customers
+
+- **Newsletter Subscription** - Email signup for updates
+
+- **Shopping Cart** - Add to cart functionality
+
+- **Responsive Design** - Mobile-first approach with smooth animations using Framer Motion
+
+## Tech Stack
+
+- React.js
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Router
+- Lucide React Icons
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Project Structure
+
+```
+src/
+├── components/     # Reusable components (Header, Footer, Cart)
+├── context/      # React context (CartContext)
+├── pages/       # Page components (Home, Products, About, Contact)
+├── Images/      # Product images
+└── assets/      # Static assets
+```
+
+## Implemented Tasks
+
+1. Removed background images from first slider only
+2. Fixed text animation direction (left for slide 1, right for others)
+3. Fixed text transition overlap issues
+4. Adjusted text alignment in hero section
+5. Fixed animation speed for smooth transitions
