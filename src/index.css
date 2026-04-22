@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-light-pink: #FDEBED;
+  --color-brand-accent-pink: #F5D6D9;
+  --color-brand-gold: #D7A867;
+  --color-brand-dark-mauve: #A16973;
+  --color-brand-off-white: #FEFDFB;
+  --color-cream: #F9EDD9;
+
+  --font-script: "Pinyon Script", cursive;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+  body {
+    @apply bg-brand-light-pink text-brand-dark-mauve font-sans;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .script-text {
+    @apply font-script;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-brand-light-pink;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand-accent-pink rounded-full hover:bg-brand-gold transition-colors;
+  }
+}
+
+/* Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 500ms, transform 500ms;
+}
