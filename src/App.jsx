@@ -22,7 +22,7 @@ function App() {
   return (
     <CartProvider>
       <SEO />
-      <Router>
+      <Router basename="/truffles-More_Cafe">
         <ScrollToTop />
         <div className="flex flex-col min-h-screen">
           <Header />
