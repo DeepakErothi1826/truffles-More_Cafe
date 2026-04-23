@@ -12,6 +12,7 @@ const slides = [
     {
       image: "/truffles-More_Cafe/Images/Hero_Section.jpg",
       image2: "/truffles-More_Cafe/Images/cake_hero.png",
+      heroBg: "/truffles-More_Cafe/Images/hero.jpg",
       headline: "Welcome to Truffles & More",
       subheadline: "Artisan Bakery & Coffee House",
       content: "We are passionate artisans crafting exquisite desserts with love since 2010. From handcrafted cakes to delicate macarons, every bite tells a story of dedication and perfection.",
@@ -22,6 +23,7 @@ const slides = [
     {
       image: "/truffles-More_Cafe/Images/Chocolate Truffle Cupcake - Gold Hazelnut Luxury.jpg",
       image2: "/truffles-More_Cafe/coffee-hero.png",
+      heroBg: "/truffles-More_Cafe/Images/hero-background2.jpg",
       headline: "Handcrafted Perfection",
       subheadline: "Baked with Passion",
       content: "Every creation is made with premium ingredients from around the world. Our master bakers combine traditional French techniques with modern innovation to deliver extraordinary flavors.",
@@ -32,6 +34,7 @@ const slides = [
     {
       image: "/truffles-More_Cafe/Images/Simple and Creative Birthday Cake Decorating Ideas You Can Try at Home.jpg",
       image2: "/truffles-More_Cafe/Images/icecream_hero.png",
+      heroBg: "/truffles-More_Cafe/Images/hero_background.jpg",
       headline: "Fresh Daily Bakes",
       subheadline: "Baked Fresh Every Morning",
       content: "Wake up to the aroma of freshly baked goods. Our pastries, breads, and cakes are made fresh each morning using time-honored recipes and the finest ingredients.",
@@ -42,6 +45,7 @@ const slides = [
     {
       image: "/truffles-More_Cafe/Images/Chocolate Cake & Berry Dessert.jpg",
       image2: "/truffles-More_Cafe/Images/coffee_beans.png",
+      heroBg: "/truffles-More_Cafe/Images/Hero_Section.jpg",
       headline: "Delight in every Bite!",
       subheadline: "Experience True Indulgence",
       content: "Every bite is a journey through the artisan streets of Paris, crafted with love and gold. Discover our range of luxuries cakes, artisan chocolates, and handcrafted beverages.",
@@ -114,98 +118,54 @@ const slides = [
 
 return (
     <div className="relative overflow-hidden min-h-screen">
-      {/* Hero Slider Section */}
-      <section className="relative min-h-[60vh] md:h-[70vh] overflow-hidden">
-        {/* Background Images for each slide */}
-        {currentSlide === 0 && (
-          <div className="absolute inset-0 z-0">
-            <img
-              src={slides[0].image}
-              alt="Hero"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        )}
-        {currentSlide === 1 && (
-          <div className="absolute inset-0 z-0 flex">
-            <div className="absolute left-0 top-0 bottom-0 w-1/2">
-              <img
-                src={slides[1].image}
-                alt="Cupcake Hero"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute right-0 top-0 bottom-0 w-1/2">
-              <img
-                src="/truffles-More_Cafe/coffee-hero.png"
-                alt="Coffee hero"
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-        )}
-        {currentSlide === 2 && (
-          <div className="absolute inset-0 z-0 flex">
-            <div className="absolute left-0 top-0 w-1/2 h-full">
-              <img
-                src={slides[2].image}
-                alt="Fresh Bakes Hero"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute right-0 top-0 w-1/2 h-full flex items-center justify-end">
-              <img
-                src={slides[2].image2}
-                alt="Ice cream"
-                className="w-1/2 h-3/4 object-contain mr-16"
-              />
-            </div>
-          </div>
-        )}
-        {currentSlide === 3 && (
-          <div className="absolute inset-0 z-0 flex">
-            <div className="absolute left-0 top-0 w-1/2 h-full">
-              <img
-                src={slides[3].image}
-                alt="Chocolate Cake Hero"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute right-0 top-0 w-1/2 h-full flex items-center justify-end">
-              <img
-                src={slides[3].image2}
-                alt="Coffee beans"
-                className="w-1/3 h-3/4 object-contain mr-16"
-              />
-            </div>
-          </div>
-        )}
+{/* Hero Slider Section */}
+      <section 
+        className="relative min-h-[70vh] md:min-h-[80vh] lg:h-[85vh] overflow-hidden"
+        style={{
+          backgroundImage: `url(${slides[currentSlide].heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top'
+        }}
+      >
+        {/* Dark overlay for text visibility */}
+        <div className="absolute inset-0 bg-black/60 z-0"></div>
 
-        <div className="container mx-auto px-4 md:px-6 z-10 w-full h-full flex items-center">
-            <div className="max-w-lg text-center lg:text-left w-full">
-              <h2 className="text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-gold mb-2 sm:mb-3 font-bold">{slides[currentSlide].subheadline}</h2>
-              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight text-brand-off-white">
-                {slides[currentSlide].headline}
-              </h1>
-              <p className="text-sm sm:text-base text-brand-off-white/90 mb-4 sm:mb-5 md:mb-6 max-w-sm sm:max-w-md lg:max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                {slides[currentSlide].content}
-              </p>
-              <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start mb-4 sm:mb-5 md:mb-6">
-                {slides[currentSlide].features?.map((feature, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-brand-gold/30 text-brand-off-white text-xs sm:text-sm font-semibold rounded-full backdrop-blur-sm">
-                    {feature}
-                  </span>
-                ))}
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                <Link to={slides[currentSlide].ctaLink} className="px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 bg-brand-dark-mauve text-white rounded-full font-bold tracking-wider text-xs sm:text-sm hover:bg-brand-gold hover:text-brand-dark-mauve transition-all shadow-lg">
-                  {slides[currentSlide].ctaText}
-                </Link>
-                <Link to="/products" className="px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 bg-white text-brand-dark-mauve border-2 border-brand-dark-mauve rounded-full font-bold tracking-wider text-xs sm:text-sm hover:bg-brand-gold hover:border-brand-gold hover:text-white transition-all shadow-lg">
-                  BUY NOW
-                </Link>
-              </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-10">
+          <div className="w-full max-w-2xl mx-auto lg:mx-0 lg:max-w-xl">
+            {/* Subheadline */}
+            <p className="text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-gold mb-3 sm:mb-4 md:mb-5 font-bold text-center lg:text-left">
+              {slides[currentSlide].subheadline}
+            </p>
+            
+            {/* Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-script mb-3 sm:mb-4 md:mb-5 leading-[1.1] sm:leading-[1.15] text-white text-center lg:text-left">
+              {slides[currentSlide].headline}
+            </h1>
+            
+            {/* Content */}
+            <p className="text-sm sm:text-base md:text-lg text-white/85 mb-5 sm:mb-6 md:mb-8 leading-relaxed max-w-md mx-auto lg:mx-0 text-center lg:text-left">
+              {slides[currentSlide].content}
+            </p>
+            
+            {/* Feature Tags */}
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start mb-6 sm:mb-8">
+              {slides[currentSlide].features?.map((feature, idx) => (
+                <span key={idx} className="px-3 sm:px-4 py-1.5 sm:py-2 bg-brand-gold/25 text-white text-[10px] sm:text-xs font-semibold rounded-full backdrop-blur-sm border border-white/20">
+                  {feature}
+                </span>
+              ))}
             </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+              <Link to={slides[currentSlide].ctaLink} className="px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 bg-brand-dark-mauve text-white rounded-full font-bold tracking-wider text-xs sm:text-sm hover:bg-brand-gold hover:text-brand-dark-mauve transition-all shadow-lg text-center">
+                {slides[currentSlide].ctaText}
+              </Link>
+              <Link to="/products" className="px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 bg-white/90 text-brand-dark-mauve border-2 border-white rounded-full font-bold tracking-wider text-xs sm:text-sm hover:bg-brand-gold hover:border-brand-gold hover:text-white transition-all shadow-lg text-center">
+                BUY NOW
+              </Link>
+            </div>
+          </div>
         </div>
 
         {/* Navigation Arrows */}
