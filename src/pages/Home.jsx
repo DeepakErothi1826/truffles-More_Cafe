@@ -186,15 +186,7 @@ return (
         )}
 
         <div className="container mx-auto px-4 md:px-6 z-10 w-full h-full flex items-center">
-          <AnimatePresence mode='wait'>
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="max-w-lg text-center lg:text-left w-full"
-            >
+            <div className="max-w-lg text-center lg:text-left w-full">
               <h2 className="text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-dark-mauve mb-2 sm:mb-3 font-bold">{slides[currentSlide].subheadline}</h2>
               <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight text-brand-dark-mauve">
                 {slides[currentSlide].headline}
@@ -217,8 +209,7 @@ return (
                   BUY NOW
                 </Link>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
         </div>
 
         {/* Navigation Arrows */}
