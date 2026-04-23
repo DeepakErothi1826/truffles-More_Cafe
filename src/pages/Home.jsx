@@ -12,7 +12,6 @@ const slides = [
     {
       image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
       image2: "/truffles-More_Cafe/coffee-hero.png",
-      bgImage: "https://images.unsplash.com/photo-1517433670267-30f4162d4993?q=80&w=1920&auto=format&fit=crop",
       headline: "Welcome to Truffles & More",
       subheadline: "Artisan Bakery & Coffee House",
       content: "We are passionate artisans crafting exquisite desserts with love since 2010. From handcrafted cakes to delicate macarons, every bite tells a story of dedication and perfection.",
@@ -23,7 +22,6 @@ const slides = [
     {
       image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
       image2: "/truffles-More_Cafe/coffee-hero.png",
-      bgImage: "https://images.unsplash.com/photo-1556217477-d325251ece38?q=80&w=1920&auto=format&fit=crop",
       headline: "Handcrafted Perfection",
       subheadline: "Baked with Passion",
       content: "Every creation is made with premium ingredients from around the world. Our master bakers combine traditional French techniques with modern innovation to deliver extraordinary flavors.",
@@ -34,7 +32,6 @@ const slides = [
     {
       image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
       image2: "/truffles-More_Cafe/coffee-hero.png",
-      bgImage: "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?q=80&w=1920&auto=format&fit=crop",
       headline: "Fresh Daily Bakes",
       subheadline: "Baked Fresh Every Morning",
       content: "Wake up to the aroma of freshly baked goods. Our pastries, breads, and cakes are made fresh each morning using time-honored recipes and the finest ingredients.",
@@ -45,7 +42,6 @@ const slides = [
     {
       image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
       image2: "/truffles-More_Cafe/coffee-hero.png",
-      bgImage: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1920&auto=format&fit=crop",
       headline: "Delight in every Bite!",
       subheadline: "Experience True Indulgence",
       content: "Every bite is a journey through the artisan streets of Paris, crafted with love and gold. Discover our range of luxuries cakes, artisan chocolates, and handcrafted beverages.",
@@ -120,15 +116,46 @@ return (
     <div className="relative overflow-hidden bg-brand-light-pink min-h-screen">
       {/* Hero Slider Section */}
       <section className="relative min-h-[60vh] md:h-[70vh] overflow-hidden">
-        {/* Background Image for each slide */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={slides[currentSlide].bgImage}
-            alt={slides[currentSlide].headline}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/95 via-brand-light-pink/80 to-brand-light-pink/40" />
-        </div>
+        {/* Background Images - only show for slides 1,2,3 */}
+        {currentSlide !== 0 && currentSlide < 2 && (
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            {currentSlide !== 1 && (
+              <div className="absolute -left-10 top-0 w-1/2 h-full">
+                <img
+                  src={slides[currentSlide].image}
+                  alt="Truffles&More Coffee Hero"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+            {currentSlide === 1 ? (
+              <>
+                <div className="absolute right-0 top-0 bottom-0 w-1/2" style={{ transform: 'translateX(-20%)' }}>
+                  <img
+                    src="/truffles-More_Cafe/coffee-hero.png"
+                    alt="Coffee hero"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="absolute right-0 top-0 bottom-0 w-1/2" style={{ transform: 'translateX(20%)' }}>
+                  <img
+                    src="/truffles-More_Cafe/Images/coffee-right-side.png"
+                    alt="Coffee right"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </>
+            ) : (
+              <div className="absolute right-0 top-0 w-1/2 h-full flex items-center justify-end">
+                <img
+                  src={slides[currentSlide].image2}
+                  alt="Coffee img"
+                  className="w-1/2 h-3/4 object-contain mr-32"
+                />
+              </div>
+            )}
+          </div>
+        )}
 
         <div className="container mx-auto px-4 md:px-6 z-10 w-full h-full flex items-start">
           <AnimatePresence mode='wait'>
@@ -147,14 +174,14 @@ return (
               <p className="text-sm md:text-base text-brand-dark-mauve/80 mb-5 md:mb-6 max-w-md leading-relaxed">
                 {slides[currentSlide].content}
               </p>
-              <div className="flex flex-wrap gap-2 md:gap-3 justify-start mb-5 md:mb-6">
-                {slides[currentSlide].features?.map((feature, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-brand-gold/20 text-brand-dark-mauve text-xs font-semibold rounded-full">
-                    {feature}
-                  </span>
-                ))}
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3 justify-start">
+<div className="flex flex-wrap gap-2 md:gap-3 justify-start mb-5 md:mb-6">
+              {slides[currentSlide].features?.map((feature, idx) => (
+                <span key={idx} className="px-3 py-1 bg-brand-gold/20 text-brand-dark-mauve text-xs font-semibold rounded-full">
+                  {feature}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 justify-start">
                 <Link to={slides[currentSlide].ctaLink} className="px-8 md:px-10 py-3 bg-brand-dark-mauve text-white rounded-full font-bold tracking-widest text-xs hover:bg-[#2d1a2d] transition-all shadow-lg">
                   {slides[currentSlide].ctaText}
                 </Link>
