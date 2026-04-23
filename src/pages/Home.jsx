@@ -120,7 +120,7 @@ return (
     <div className="relative overflow-hidden min-h-screen">
 {/* Hero Slider Section */}
       <section 
-        className="relative min-h-[50vh] md:min-h-[60vh] lg:min-h-[65vh] overflow-hidden"
+        className="relative h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden"
         style={{
           backgroundImage: `url(${slides[currentSlide].heroBg})`,
           backgroundSize: 'cover',
@@ -130,38 +130,38 @@ return (
         {/* Dark overlay for text visibility */}
         <div className="absolute inset-0 bg-black/60 z-0"></div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-10 pt-16 sm:pt-20 md:pt-24 lg:pt-28 pl-5 sm:pl-5 md:pl-8 lg:pl-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-10 pt-8 sm:pt-10 md:pt-12 lg:pt-14 pl-5 sm:pl-5 md:pl-8 lg:pl-10">
           <div className="w-full max-w-2xl mx-auto lg:mx-0 lg:max-w-xl">
             {/* Subheadline */}
-            <p className="text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-gold mb-3 sm:mb-4 md:mb-5 font-bold text-center lg:text-left">
+            <p className="text-[8px] sm:text-[10px] md:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-gold mb-1 sm:mb-1 md:mb-2 font-bold text-left">
               {slides[currentSlide].subheadline}
             </p>
             
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-script mb-3 sm:mb-4 md:mb-5 leading-[1.1] sm:leading-[1.15] text-white text-center lg:text-left">
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-script mb-1 sm:mb-1 md:mb-2 leading-[1.1] sm:leading-[1.15] text-white text-left">
               {slides[currentSlide].headline}
             </h1>
             
             {/* Content */}
-            <p className="text-sm sm:text-base md:text-lg text-white/85 mb-5 sm:mb-6 md:mb-8 leading-relaxed max-w-md mx-auto lg:mx-0 text-center lg:text-left">
+            <p className="text-[10px] sm:text-xs md:text-sm text-white/85 mb-2 sm:mb-3 md:mb-4 leading-relaxed max-w-md text-left">
               {slides[currentSlide].content}
             </p>
             
             {/* Feature Tags */}
-            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start mb-6 sm:mb-8">
+            <div className="flex flex-wrap gap-1 sm:gap-2 justify-start mb-2 sm:mb-3">
               {slides[currentSlide].features?.map((feature, idx) => (
-                <span key={idx} className="px-3 sm:px-4 py-1.5 sm:py-2 bg-brand-gold/25 text-white text-[10px] sm:text-xs font-semibold rounded-full backdrop-blur-sm border border-white/20">
+                <span key={idx} className="px-2 sm:px-3 py-1 sm:py-1.5 bg-brand-gold/25 text-white text-[8px] sm:text-[10px] font-semibold rounded-full backdrop-blur-sm border border-white/20">
                   {feature}
                 </span>
               ))}
             </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <Link to={slides[currentSlide].ctaLink} className="px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 bg-brand-dark-mauve text-white rounded-full font-bold tracking-wider text-xs sm:text-sm hover:bg-brand-gold hover:text-brand-dark-mauve transition-all shadow-lg text-center">
+            <div className="flex flex-row gap-2 sm:gap-3 justify-start">
+              <Link to={slides[currentSlide].ctaLink} className="px-4 sm:px-6 md:px-8 py-2 sm:py-2 bg-brand-dark-mauve text-white rounded-full font-bold tracking-wider text-[10px] sm:text-xs hover:bg-brand-gold hover:text-brand-dark-mauve transition-all shadow-lg text-center">
                 {slides[currentSlide].ctaText}
               </Link>
-              <Link to="/products" className="px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 bg-white/90 text-brand-dark-mauve border-2 border-white rounded-full font-bold tracking-wider text-xs sm:text-sm hover:bg-brand-gold hover:border-brand-gold hover:text-white transition-all shadow-lg text-center">
+              <Link to="/products" className="px-4 sm:px-6 md:px-8 py-2 sm:py-2 bg-white/90 text-brand-dark-mauve border-2 border-white rounded-full font-bold tracking-wider text-[10px] sm:text-xs hover:bg-brand-gold hover:border-brand-gold hover:text-white transition-all shadow-lg text-center">
                 BUY NOW
               </Link>
             </div>
