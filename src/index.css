@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Mirabelle";
+  src: url("./fonts/mirabelle/Mirabelle/Mirabelle.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 
 @theme {
@@ -8,7 +16,7 @@
   --color-brand-off-white: #FEFDFB;
   --color-cream: #F9EDD9;
 
-  --font-script: "Pinyon Script", cursive;
+  --font-mirabelle: "Mirabelle", cursive;
   --font-serif: "Playfair Display", serif;
   --font-sans: "Montserrat", sans-serif;
 
@@ -35,7 +43,7 @@
 
 @layer components {
   .script-text {
-    @apply font-script;
+    @apply font-mirabelle;
   }
 
   /* Custom Scrollbar */

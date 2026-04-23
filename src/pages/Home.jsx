@@ -168,7 +168,7 @@ const Home = () => {
               className="max-w-lg lg:max-w-xl text-center lg:text-left pl-0 lg:pl-8"
             >
               <h2 className="text-xs md:text-sm uppercase tracking-[0.4em] text-brand-gold mb-3 font-light">{slides[currentSlide].subheadline}</h2>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-script mb-4 md:mb-5 leading-tight" style={{color: '#A16973', whiteSpace: 'nowrap'}}>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-mirabelle mb-4 md:mb-5 leading-tight" style={{color: '#A16973', whiteSpace: 'nowrap'}}>
                 {slides[currentSlide].headline}
               </h1>
               <p className="text-sm md:text-base text-brand-dark-mauve/80 mb-5 md:mb-6 max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
@@ -223,7 +223,7 @@ const Home = () => {
       <section className="py-10 md:py-14 lg:py-16 pb-32 md:pb-40 bg-brand-dark-mauve/90">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-8 md:mb-12">
-            <h3 className="text-xl md:text-2xl font-script text-brand-gold mb-1">Exquisite</h3>
+            <h3 className="text-xl md:text-2xl font-mirabelle text-brand-gold mb-1">Exquisite</h3>
             <h2 className="text-xl md:text-3xl lg:text-4xl font-serif text-brand-light-pink uppercase tracking-widest">The Collections</h2>
           </div>
 
@@ -332,7 +332,7 @@ const Home = () => {
           <div className="bg-brand-dark-mauve rounded-2xl md:rounded-[3rem] p-6 md:p-12 lg:p-16 flex flex-col md:flex-row items-center justify-between shadow-2xl border border-brand-accent-pink/50">
             <div className="md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
               <span className="inline-block px-3 md:px-4 py-1 bg-brand-gold text-brand-off-white text-[10px] font-bold tracking-[0.3em] uppercase rounded-full mb-4 md:mb-6">Limited Edition</span>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-script text-brand-off-white mb-4 md:mb-6 leading-tight">Holiday Season - 20% OFF</h2>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-mirabelle text-brand-off-white mb-4 md:mb-6 leading-tight">Holiday Season - 20% OFF</h2>
               <p className="text-brand-off-white/70 mb-6 md:mb-10 max-w-md leading-relaxed mx-auto md:mx-0">
                 Gift the taste of Paris this winter. Our holiday collections are now available for pre-order with exclusive seasonal flavors.
               </p>
@@ -425,7 +425,7 @@ const Home = () => {
       <section className="py-16 md:py-24 bg-brand-accent-pink">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-6 md:mb-8">
-            <h3 className="text-2xl md:text-4xl font-script text-brand-gold mb-2">Follow Us</h3>
+            <h3 className="text-2xl md:text-4xl font-mirabelle text-brand-gold mb-2">Follow Us</h3>
             <h2 className="text-2xl md:text-4xl font-serif text-brand-dark-mauve uppercase tracking-widest">@truffles&More</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2">
@@ -450,7 +450,7 @@ const Home = () => {
       {/* Newsletter */}
       <section className="py-16 md:py-24 bg-brand-accent-pink/20">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-xl md:text-2xl font-script text-brand-dark-mauve mb-2">Stay Sweet!</h2>
+          <h2 className="text-xl md:text-2xl font-mirabelle text-brand-dark-mauve mb-2">Stay Sweet!</h2>
           <p className="text-brand-dark-mauve/70 mb-6 md:mb-8 max-w-md mx-auto">Subscribe to get exclusive offers and updates on new arrivals.</p>
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center max-w-md mx-auto">
             <input
@@ -473,3 +473,4 @@ const Home = () => {
 };
 
 export default Home;
+

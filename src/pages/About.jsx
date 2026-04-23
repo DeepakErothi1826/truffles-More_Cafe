@@ -20,7 +20,7 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-7xl md:text-9xl font-script text-brand-dark-mauve mb-4"
+            className="text-7xl md:text-9xl font-mirabelle text-brand-dark-mauve mb-4"
           >
             Our Story
           </motion.h1>
@@ -196,7 +196,7 @@ const About = () => {
       {/* CTA Section */}
       <section className="py-24 px-6">
         <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-script text-brand-dark-mauve mb-6">Experience the Magic</h2>
+          <h2 className="text-5xl font-mirabelle text-brand-dark-mauve mb-6">Experience the Magic</h2>
           <p className="text-brand-dark-mauve/70 mb-10 max-w-2xl mx-auto">
             We invite you to visit our boutique or order online to experience the true taste of artisan patisserie.
           </p>
@@ -215,3 +215,4 @@ const About = () => {
 };
 
 export default About;
+

@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
         {/* Logo & About */}
         <div className="space-y-6">
-          <h2 className="text-4xl font-script text-brand-off-white">truffles&More</h2>
+          <h2 className="text-4xl font-mirabelle text-brand-off-white">truffles&More</h2>
           <p className="text-sm text-brand-off-white/70 leading-relaxed font-light">
             Crafting elegance in every bite. Our artisan patisserie brings authentic French flavors with a modern touch to your doorstep.
           </p>
@@ -87,3 +87,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
