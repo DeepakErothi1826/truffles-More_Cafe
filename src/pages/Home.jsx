@@ -167,14 +167,14 @@ return (
               transition={{ duration: 0.5, delay: 0.1 }}
               className="max-w-lg text-center lg:text-left w-full"
             >
-              <h2 className="text-xs md:text-sm uppercase tracking-[0.4em] text-brand-gold mb-3 font-light">{slides[currentSlide].subheadline}</h2>
-              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-script mb-4 md:mb-5 leading-tight overflow-hidden text-ellipsis" style={{color: '#A16973'}}>
+              <h2 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-gold mb-2 sm:mb-3 font-light">{slides[currentSlide].subheadline}</h2>
+              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight" style={{color: '#A16973'}}>
                 {slides[currentSlide].headline}
               </h1>
-              <p className="text-sm md:text-base text-brand-dark-mauve/80 mb-5 md:mb-6 max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
+              <p className="text-xs sm:text-sm text-brand-dark-mauve/80 mb-4 sm:mb-5 md:mb-6 max-w-[200px] sm:max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
                 {slides[currentSlide].content}
               </p>
-<div className="flex flex-wrap gap-2 md:gap-3 justify-center lg:justify-start mb-5 md:mb-6">
+<div className="flex flex-wrap gap-1 sm:gap-2 md:gap-3 justify-center lg:justify-start mb-4 sm:mb-5 md:mb-6">
               {slides[currentSlide].features?.map((feature, idx) => (
                 <span key={idx} className="px-3 py-1 bg-brand-gold/20 text-brand-dark-mauve text-xs font-semibold rounded-full">
                   {feature}
