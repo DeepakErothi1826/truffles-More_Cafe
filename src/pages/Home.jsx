@@ -120,7 +120,7 @@ return (
     <div className="relative overflow-hidden min-h-screen">
 {/* Hero Slider Section */}
       <section 
-        className="relative min-h-[70vh] md:min-h-[80vh] lg:h-[85vh] overflow-hidden"
+        className="relative min-h-screen md:min-h-[90vh] lg:min-h-screen overflow-hidden"
         style={{
           backgroundImage: `url(${slides[currentSlide].heroBg})`,
           backgroundSize: 'cover',
