@@ -11,7 +11,7 @@ const Home = () => {
   const slides = [
     {
       image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
-      image2: "/coffee-hero.png",
+      image2: "/truffles-More_Cafe/coffee-hero.png",
       headline: "Welcome to Truffles & More",
       subheadline: "Artisan Bakery & Coffee House",
       content: "We are passionate artisans crafting exquisite desserts with love since 2010. From handcrafted cakes to delicate macarons, every bite tells a story of dedication and perfection.",
@@ -21,7 +21,7 @@ const Home = () => {
     },
     {
       image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
-      image2: "/coffee-hero.png",
+      image2: "/truffles-More_Cafe/coffee-hero.png",
       headline: "Handcrafted Perfection",
       subheadline: "Baked with Passion",
       content: "Every creation is made with premium ingredients from around the world. Our master bakers combine traditional French techniques with modern innovation to deliver extraordinary flavors.",
@@ -31,7 +31,7 @@ const Home = () => {
     },
     {
       image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
-      image2: "/coffee-hero.png",
+      image2: "/truffles-More_Cafe/coffee-hero.png",
       headline: "Fresh Daily Bakes",
       subheadline: "Baked Fresh Every Morning",
       content: "Wake up to the aroma of freshly baked goods. Our pastries, breads, and cakes are made fresh each morning using time-honored recipes and the finest ingredients.",
@@ -41,7 +41,7 @@ const Home = () => {
     },
     {
       image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
-      image2: "/coffee-hero.png",
+      image2: "/truffles-More_Cafe/coffee-hero.png",
       headline: "Delight in every Bite!",
       subheadline: "Experience True Indulgence",
       content: "Every bite is a journey through the artisan streets of Paris, crafted with love and gold. Discover our range of luxuries cakes, artisan chocolates, and handcrafted beverages.",
@@ -117,26 +117,47 @@ const Home = () => {
       {/* Hero Slider Section */}
       <section className="relative min-h-[60vh] md:h-[70vh] overflow-hidden">
         {/* Background Images - only show for slides 1,2,3 */}
-        {currentSlide !== 0 && (
+        {currentSlide !== 0 && currentSlide < 2 && (
           <div className="absolute inset-0 z-0 pointer-events-none">
-            <div className="absolute -left-10 top-0 w-1/2 h-full">
-              <img
-                src={slides[currentSlide].image}
-                alt="Truffles&More Coffee Hero"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute left-0 top-0 w-1/2 h-full flex items-center justify-end">
-              <img
-                src={slides[currentSlide].image2}
-                alt="Coffee img"
-                className="w-1/2 h-3/4 object-contain ml-32"
-              />
-            </div>
+            {currentSlide !== 1 && (
+              <div className="absolute -left-10 top-0 w-1/2 h-full">
+                <img
+                  src={slides[currentSlide].image}
+                  alt="Truffles&More Coffee Hero"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+            {currentSlide === 1 ? (
+              <>
+                <div className="absolute right-0 top-0 bottom-0 w-1/2" style={{ transform: 'translateX(-20%)' }}>
+                  <img
+                    src="/truffles-More_Cafe/coffee-hero.png"
+                    alt="Coffee hero"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="absolute right-0 top-0 bottom-0 w-1/2" style={{ transform: 'translateX(20%)' }}>
+                  <img
+                    src="/truffles-More_Cafe/Images/coffee-right-side.png"
+                    alt="Coffee right"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </>
+            ) : (
+              <div className="absolute right-0 top-0 w-1/2 h-full flex items-center justify-end">
+                <img
+                  src={slides[currentSlide].image2}
+                  alt="Coffee img"
+                  className="w-1/2 h-3/4 object-contain mr-32"
+                />
+              </div>
+            )}
           </div>
         )}
 
-        <div className={`container mx-auto px-4 md:px-6 z-10 w-full h-full flex items-center ${currentSlide === 0 ? '' : 'justify-end'}`}>
+        <div className={`container mx-auto px-4 md:px-6 z-10 w-full h-full flex items-center ${currentSlide <= 1 ? '' : ''}`}>
           <AnimatePresence mode='wait'>
             <motion.div
               key={currentSlide}
@@ -144,28 +165,28 @@ const Home = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: currentSlide === 0 ? -50 : 50 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className={currentSlide === 0 ? "max-w-lg lg:max-w-xl text-center lg:text-left pl-0 lg:pl-8" : "max-w-lg lg:max-w-xl text-center lg:text-right"}
+              className="max-w-lg lg:max-w-xl text-center lg:text-left pl-0 lg:pl-8"
             >
               <h2 className="text-xs md:text-sm uppercase tracking-[0.4em] text-brand-gold mb-3 font-light">{slides[currentSlide].subheadline}</h2>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-script text-brand-dark-mauve mb-4 md:mb-5 leading-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-script mb-4 md:mb-5 leading-tight" style={{color: '#A16973', whiteSpace: 'nowrap'}}>
                 {slides[currentSlide].headline}
               </h1>
               <p className="text-sm md:text-base text-brand-dark-mauve/80 mb-5 md:mb-6 max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
                 {slides[currentSlide].content}
               </p>
-              <div className={`flex flex-wrap gap-2 md:gap-3 justify-center ${currentSlide === 0 ? 'lg:justify-start' : 'lg:justify-end'} mb-5 md:mb-6`}>
-                {slides[currentSlide].features?.map((feature, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-brand-gold/20 text-brand-dark-mauve text-xs font-semibold rounded-full">
-                    {feature}
-                  </span>
-                ))}
-              </div>
-              <div className={`flex flex-col sm:flex-row gap-3 justify-center ${currentSlide === 0 ? 'lg:justify-start' : 'lg:justify-end'}`}>
+<div className="flex flex-wrap gap-2 md:gap-3 justify-center lg:justify-start mb-5 md:mb-6">
+              {slides[currentSlide].features?.map((feature, idx) => (
+                <span key={idx} className="px-3 py-1 bg-brand-gold/20 text-brand-dark-mauve text-xs font-semibold rounded-full">
+                  {feature}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Link to={slides[currentSlide].ctaLink} className="px-8 md:px-10 py-3 bg-brand-dark-mauve text-white rounded-full font-bold tracking-widest text-xs hover:bg-[#2d1a2d] transition-all shadow-lg">
                   {slides[currentSlide].ctaText}
                 </Link>
-                <Link to="/about" className="px-8 md:px-10 py-3 bg-white text-brand-dark-mauve border-2 border-brand-dark-mauve rounded-full font-bold tracking-widest text-xs hover:bg-brand-dark-mauve hover:text-white transition-all shadow-lg">
-                  OUR STORY
+                <Link to="/products" className="px-8 md:px-10 py-3 bg-white text-brand-dark-mauve border-2 border-brand-dark-mauve rounded-full font-bold tracking-widest text-xs hover:bg-brand-dark-mauve hover:text-white transition-all shadow-lg">
+                  BUY NOW
                 </Link>
               </div>
             </motion.div>
