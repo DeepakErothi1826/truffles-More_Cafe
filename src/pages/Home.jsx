@@ -124,7 +124,6 @@ return (
               alt="Hero"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/90 via-brand-light-pink/70 to-transparent" />
           </div>
         )}
         {currentSlide === 1 && (
@@ -143,7 +142,6 @@ return (
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/90 via-brand-light-pink/60 to-transparent" />
           </div>
         )}
         {currentSlide === 2 && (
@@ -162,7 +160,6 @@ return (
                 className="w-1/2 h-3/4 object-contain mr-16"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/90 via-brand-light-pink/60 to-transparent" />
           </div>
         )}
         {currentSlide === 3 && (
@@ -181,7 +178,6 @@ return (
                 className="w-1/3 h-3/4 object-contain mr-16"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/90 via-brand-light-pink/60 to-transparent" />
           </div>
         )}
 
@@ -195,25 +191,25 @@ return (
               transition={{ duration: 0.5, delay: 0.1 }}
               className="max-w-lg text-center lg:text-left w-full"
             >
-              <h2 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-gold mb-2 sm:mb-3 font-light">{slides[currentSlide].subheadline}</h2>
-              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight" style={{color: '#A16973'}}>
+              <h2 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] text-white mb-2 sm:mb-3 font-light">{slides[currentSlide].subheadline}</h2>
+              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight text-white">
                 {slides[currentSlide].headline}
               </h1>
-              <p className="text-xs sm:text-sm text-brand-dark-mauve/80 mb-4 sm:mb-5 md:mb-6 max-w-[200px] sm:max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
+              <p className="text-xs sm:text-sm text-white/90 mb-4 sm:mb-5 md:mb-6 max-w-[200px] sm:max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
                 {slides[currentSlide].content}
               </p>
 <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-3 justify-center lg:justify-start mb-4 sm:mb-5 md:mb-6">
               {slides[currentSlide].features?.map((feature, idx) => (
-                <span key={idx} className="px-3 py-1 bg-brand-gold/20 text-brand-dark-mauve text-xs font-semibold rounded-full">
+                <span key={idx} className="px-3 py-1 bg-white/20 text-white text-xs font-semibold rounded-full">
                   {feature}
                 </span>
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center lg:justify-start">
-                <Link to={slides[currentSlide].ctaLink} className="px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-brand-dark-mauve text-white rounded-full font-bold tracking-widest text-[10px] sm:text-xs hover:bg-[#2d1a2d] transition-all shadow-lg">
+                <Link to={slides[currentSlide].ctaLink} className="px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-white text-brand-dark-mauve rounded-full font-bold tracking-widest text-[10px] sm:text-xs hover:bg-brand-gold hover:text-white transition-all shadow-lg">
                   {slides[currentSlide].ctaText}
                 </Link>
-                <Link to="/products" className="px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-white text-brand-dark-mauve border-2 border-brand-dark-mauve rounded-full font-bold tracking-widest text-[10px] sm:text-xs hover:bg-brand-dark-mauve hover:text-white transition-all shadow-lg">
+                <Link to="/products" className="px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-transparent text-white border-2 border-white rounded-full font-bold tracking-widest text-[10px] sm:text-xs hover:bg-white hover:text-brand-dark-mauve transition-all shadow-lg">
                   BUY NOW
                 </Link>
               </div>
