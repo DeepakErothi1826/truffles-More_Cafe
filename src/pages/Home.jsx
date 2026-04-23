@@ -124,7 +124,6 @@ return (
               alt="Hero"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/95 via-brand-light-pink/80 to-transparent" />
           </div>
         )}
         {currentSlide === 1 && (
@@ -143,7 +142,6 @@ return (
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/95 via-brand-light-pink/80 to-transparent" />
           </div>
         )}
         {currentSlide === 2 && (
@@ -162,7 +160,6 @@ return (
                 className="w-1/2 h-3/4 object-contain mr-16"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/95 via-brand-light-pink/80 to-transparent" />
           </div>
         )}
         {currentSlide === 3 && (
@@ -181,7 +178,6 @@ return (
                 className="w-1/3 h-3/4 object-contain mr-16"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/95 via-brand-light-pink/80 to-transparent" />
           </div>
         )}
 
@@ -195,11 +191,11 @@ return (
               transition={{ duration: 0.3 }}
               className="max-w-lg text-center lg:text-left w-full"
             >
-              <h2 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-dark-mauve mb-2 sm:mb-3 font-semibold">{slides[currentSlide].subheadline}</h2>
-              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight text-brand-dark-mauve">
+              <h2 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-gold mb-2 sm:mb-3 font-semibold">{slides[currentSlide].subheadline}</h2>
+              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight text-white drop-shadow-lg">
                 {slides[currentSlide].headline}
               </h1>
-              <p className="text-xs sm:text-sm text-brand-dark-mauve mb-4 sm:mb-5 md:mb-6 max-w-[200px] sm:max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
+              <p className="text-xs sm:text-sm text-white/90 mb-4 sm:mb-5 md:mb-6 max-w-[200px] sm:max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed drop-shadow">
                 {slides[currentSlide].content}
               </p>
 <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-3 justify-center lg:justify-start mb-4 sm:mb-5 md:mb-6">
