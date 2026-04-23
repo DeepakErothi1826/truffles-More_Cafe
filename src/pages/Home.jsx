@@ -124,7 +124,7 @@ return (
               alt="Hero"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-brand-light-pink/60" />
+            <div className="absolute inset-0 bg-brand-light-pink/80" />
           </div>
         )}
         {currentSlide === 1 && (
@@ -143,7 +143,7 @@ return (
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="absolute inset-0 bg-brand-light-pink/60" />
+            <div className="absolute inset-0 bg-brand-light-pink/80" />
           </div>
         )}
         {currentSlide === 2 && (
@@ -162,7 +162,7 @@ return (
                 className="w-1/2 h-3/4 object-contain mr-16"
               />
             </div>
-            <div className="absolute inset-0 bg-brand-light-pink/60" />
+            <div className="absolute inset-0 bg-brand-light-pink/80" />
           </div>
         )}
         {currentSlide === 3 && (
@@ -181,7 +181,7 @@ return (
                 className="w-1/3 h-3/4 object-contain mr-16"
               />
             </div>
-            <div className="absolute inset-0 bg-brand-light-pink/60" />
+            <div className="absolute inset-0 bg-brand-light-pink/80" />
           </div>
         )}
 
