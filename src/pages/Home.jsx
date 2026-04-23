@@ -124,7 +124,6 @@ return (
               alt="Hero"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-brand-light-pink/80" />
           </div>
         )}
         {currentSlide === 1 && (
@@ -143,7 +142,6 @@ return (
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="absolute inset-0 bg-brand-light-pink/80" />
           </div>
         )}
         {currentSlide === 2 && (
@@ -162,7 +160,6 @@ return (
                 className="w-1/2 h-3/4 object-contain mr-16"
               />
             </div>
-            <div className="absolute inset-0 bg-brand-light-pink/80" />
           </div>
         )}
         {currentSlide === 3 && (
@@ -181,22 +178,21 @@ return (
                 className="w-1/3 h-3/4 object-contain mr-16"
               />
             </div>
-            <div className="absolute inset-0 bg-brand-light-pink/80" />
           </div>
         )}
 
         <div className="container mx-auto px-4 md:px-6 z-10 w-full h-full flex items-center">
             <div className="max-w-lg text-center lg:text-left w-full">
-              <h2 className="text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-dark-mauve mb-2 sm:mb-3 font-bold">{slides[currentSlide].subheadline}</h2>
-              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight text-brand-dark-mauve">
+              <h2 className="text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-gold mb-2 sm:mb-3 font-bold">{slides[currentSlide].subheadline}</h2>
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight text-brand-off-white">
                 {slides[currentSlide].headline}
               </h1>
-              <p className="text-sm sm:text-base text-brand-dark-mauve/90 mb-4 sm:mb-5 md:mb-6 max-w-sm sm:max-w-md lg:max-w-lg mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-sm sm:text-base text-brand-off-white/90 mb-4 sm:mb-5 md:mb-6 max-w-sm sm:max-w-md lg:max-w-lg mx-auto lg:mx-0 leading-relaxed">
                 {slides[currentSlide].content}
               </p>
               <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start mb-4 sm:mb-5 md:mb-6">
                 {slides[currentSlide].features?.map((feature, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-brand-gold text-brand-dark-mauve text-xs sm:text-sm font-semibold rounded-full">
+                  <span key={idx} className="px-3 py-1 bg-brand-gold/30 text-brand-off-white text-xs sm:text-sm font-semibold rounded-full backdrop-blur-sm">
                     {feature}
                   </span>
                 ))}
