@@ -161,9 +161,9 @@ const Home = () => {
           <AnimatePresence mode='wait'>
             <motion.div
               key={currentSlide}
-              initial={{ opacity: 0, x: currentSlide === 0 ? -50 : 50 }}
+              initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: currentSlide === 0 ? -50 : 50 }}
+              exit={{ opacity: 0, x: 50 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="max-w-lg text-left pt-20 md:pt-24"
             >
