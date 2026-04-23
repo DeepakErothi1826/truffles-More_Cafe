@@ -168,7 +168,7 @@ return (
               className="max-w-lg text-center lg:text-left w-full"
             >
               <h2 className="text-xs md:text-sm uppercase tracking-[0.4em] text-brand-gold mb-3 font-light">{slides[currentSlide].subheadline}</h2>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-script mb-4 md:mb-5 leading-tight" style={{color: '#A16973', whiteSpace: 'nowrap'}}>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-script mb-4 md:mb-5 leading-tight" style={{color: '#A16973'}}>
                 {slides[currentSlide].headline}
               </h1>
               <p className="text-sm md:text-base text-brand-dark-mauve/80 mb-5 md:mb-6 max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
