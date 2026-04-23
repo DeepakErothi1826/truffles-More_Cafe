@@ -157,7 +157,7 @@ const Home = () => {
           </div>
         )}
 
-        <div className={`container mx-auto px-4 md:px-6 z-10 w-full h-full flex items-center ${currentSlide <= 1 ? '' : ''}`}>
+<div className="container mx-auto px-4 md:px-6 z-10 w-full h-full flex items-start">
           <AnimatePresence mode='wait'>
             <motion.div
               key={currentSlide}
@@ -165,23 +165,23 @@ const Home = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: currentSlide === 0 ? -50 : 50 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="max-w-lg lg:max-w-xl text-center lg:text-left lg:ml-16"
+              className="max-w-lg text-left pt-20 md:pt-24"
             >
               <h2 className="text-xs md:text-sm uppercase tracking-[0.4em] text-brand-gold mb-3 font-light">{slides[currentSlide].subheadline}</h2>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-script mb-4 md:mb-5 leading-tight" style={{color: '#A16973', whiteSpace: 'nowrap'}}>
                 {slides[currentSlide].headline}
               </h1>
-              <p className="text-sm md:text-base text-brand-dark-mauve/80 mb-5 md:mb-6 max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
+<p className="text-sm md:text-base text-brand-dark-mauve/80 mb-5 md:mb-6 max-w-md leading-relaxed">
                 {slides[currentSlide].content}
               </p>
-<div className="flex flex-wrap gap-2 md:gap-3 justify-center lg:justify-start mb-5 md:mb-6">
+<div className="flex flex-wrap gap-2 md:gap-3 justify-start mb-5 md:mb-6">
               {slides[currentSlide].features?.map((feature, idx) => (
                 <span key={idx} className="px-3 py-1 bg-brand-gold/20 text-brand-dark-mauve text-xs font-semibold rounded-full">
                   {feature}
                 </span>
               ))}
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 justify-start">
                 <Link to={slides[currentSlide].ctaLink} className="px-8 md:px-10 py-3 bg-brand-dark-mauve text-white rounded-full font-bold tracking-widest text-xs hover:bg-[#2d1a2d] transition-all shadow-lg">
                   {slides[currentSlide].ctaText}
                 </Link>
