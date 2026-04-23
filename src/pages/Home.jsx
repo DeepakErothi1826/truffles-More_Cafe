@@ -165,7 +165,7 @@ const Home = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: currentSlide === 0 ? -50 : 50 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="max-w-lg lg:max-w-xl text-center lg:text-left lg:ml-8"
+              className="max-w-lg lg:max-w-xl text-center lg:text-left lg:ml-16"
             >
               <h2 className="text-xs md:text-sm uppercase tracking-[0.4em] text-brand-gold mb-3 font-light">{slides[currentSlide].subheadline}</h2>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-script mb-4 md:mb-5 leading-tight" style={{color: '#A16973', whiteSpace: 'nowrap'}}>
