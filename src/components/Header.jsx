@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
 <header className="fixed top-0 left-0 w-full z-50 bg-brand-light-pink/80 backdrop-blur-md border-b border-brand-accent-pink/50">
-      <div className="container mx-auto px-4 md:px-8 py-3 md:py-4 flex items-center justify-between">
+      <div className="container mx-auto px-6 md:px-12 py-3 md:py-4 flex items-center justify-between">
         {/* Left: Logo */}
         <div className="flex-1">
           <Link to="/" className="text-2xl md:text-3xl font-script text-brand-dark-mauve hover:text-brand-gold transition-colors">
