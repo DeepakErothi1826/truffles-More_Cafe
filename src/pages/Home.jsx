@@ -243,12 +243,12 @@ return (
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="py-10 md:py-14 lg:py-16 pb-32 md:pb-40 bg-brand-dark-mauve/90">
+{/* Categories Section */}
+      <section className="py-10 md:py-14 lg:py-16 pb-32 md:pb-40 bg-brand-light-pink">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-8 md:mb-12">
-            <h3 className="text-xl md:text-2xl font-script text-brand-gold mb-1">Exquisite</h3>
-            <h2 className="text-xl md:text-3xl lg:text-4xl font-serif text-brand-light-pink uppercase tracking-widest">The Collections</h2>
+<div className="text-center mb-8 md:mb-12">
+            <h3 className="text-xl md:text-2xl font-script text-brand-dark-mauve mb-1">Exquisite</h3>
+            <h2 className="text-xl md:text-3xl lg:text-4xl font-serif text-brand-dark-mauve uppercase tracking-widest">The Collections</h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
