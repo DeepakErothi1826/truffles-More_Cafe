@@ -91,7 +91,7 @@ const Products = () => {
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-10 md:mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-mirabelle text-brand-dark-mauve mb-2 md:mb-4">The Collections</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-script text-brand-dark-mauve mb-2 md:mb-4">The Collections</h1>
           <p className="text-xs tracking-[0.3em] text-brand-gold uppercase">Curated Artisan Delights</p>
         </div>
 
@@ -226,4 +226,5 @@ const Products = () => {
 
 
 export default Products;
+
 

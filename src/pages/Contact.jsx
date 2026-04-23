@@ -18,7 +18,7 @@ const Contact = () => {
     <div className="bg-brand-light-pink min-h-screen pt-12 pb-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-10 md:mb-20">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-mirabelle text-brand-dark-mauve mb-2 md:mb-4">Connect with Us</h1>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-script text-brand-dark-mauve mb-2 md:mb-4">Connect with Us</h1>
           <p className="text-[10px] tracking-[0.5em] text-brand-gold uppercase">Inquiry & Reservations</p>
         </div>
 
@@ -143,4 +143,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 

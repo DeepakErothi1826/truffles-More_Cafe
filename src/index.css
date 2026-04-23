@@ -16,7 +16,7 @@
   --color-brand-off-white: #FEFDFB;
   --color-cream: #F9EDD9;
 
-  --font-mirabelle: "Mirabelle", cursive;
+  --font-script: "Mirabelle", cursive;
   --font-serif: "Playfair Display", serif;
   --font-sans: "Montserrat", sans-serif;
 
@@ -29,7 +29,7 @@
 }
 
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
   body {
     @apply bg-brand-light-pink text-brand-dark-mauve font-sans;
@@ -43,7 +43,7 @@
 
 @layer components {
   .script-text {
-    @apply font-mirabelle;
+    @apply font-script;
   }
 
   /* Custom Scrollbar */

@@ -19,7 +19,7 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
         {/* Left: Logo */}
         <div className="flex-1">
-          <Link to="/" className="text-2xl md:text-3xl font-mirabelle text-brand-dark-mauve hover:text-brand-gold transition-colors">
+          <Link to="/" className="text-2xl md:text-3xl font-script text-brand-dark-mauve hover:text-brand-gold transition-colors">
             truffles&More
           </Link>
         </div>
@@ -98,3 +98,4 @@ const Header = () => {
 };
 
 export default Header;
+
