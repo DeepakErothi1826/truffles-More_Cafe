@@ -165,7 +165,7 @@ return (
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 50 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-full max-w-lg text-center md:text-left pt-20 md:pt-24 md:pl-4"
+              className="w-full max-w-lg text-center md:text-left pt-16 md:pt-24 md:pl-4"
             >
               <h2 className="text-xs md:text-sm uppercase tracking-[0.4em] text-brand-gold mb-3 font-light">{slides[currentSlide].subheadline}</h2>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-script mb-4 md:mb-5 leading-tight" style={{color: '#A16973', whiteSpace: 'nowrap'}}>
@@ -181,11 +181,11 @@ return (
                 </span>
               ))}
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                <Link to={slides[currentSlide].ctaLink} className="px-8 md:px-10 py-3 bg-brand-dark-mauve text-white rounded-full font-bold tracking-widest text-xs hover:bg-[#2d1a2d] transition-all shadow-lg">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center md:justify-start">
+                <Link to={slides[currentSlide].ctaLink} className="px-6 sm:px-8 py-2 sm:py-3 bg-brand-dark-mauve text-white rounded-full font-bold tracking-widest text-xs hover:bg-[#2d1a2d] transition-all shadow-lg">
                   {slides[currentSlide].ctaText}
                 </Link>
-                <Link to="/products" className="px-8 md:px-10 py-3 bg-white text-brand-dark-mauve border-2 border-brand-dark-mauve rounded-full font-bold tracking-widest text-xs hover:bg-brand-dark-mauve hover:text-white transition-all shadow-lg">
+                <Link to="/products" className="px-6 sm:px-8 py-2 sm:py-3 bg-white text-brand-dark-mauve border-2 border-brand-dark-mauve rounded-full font-bold tracking-widest text-xs hover:bg-brand-dark-mauve hover:text-white transition-all shadow-lg">
                   BUY NOW
                 </Link>
               </div>
