@@ -113,7 +113,7 @@ const slides = [
   ];
 
 return (
-    <div className="relative overflow-hidden bg-brand-dark-mauve min-h-screen">
+    <div className="relative overflow-hidden min-h-screen">
       {/* Hero Slider Section */}
       <section className="relative min-h-[60vh] md:h-[70vh] overflow-hidden">
         {/* Background Images for each slide */}
@@ -122,8 +122,9 @@ return (
             <img
               src={slides[0].image}
               alt="Hero"
-              className="w-full h-full object-cover opacity-70"
+              className="w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/95 via-brand-light-pink/80 to-transparent" />
           </div>
         )}
         {currentSlide === 1 && (
@@ -132,16 +133,17 @@ return (
               <img
                 src={slides[1].image}
                 alt="Cupcake Hero"
-                className="w-full h-full object-cover opacity-70"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute right-0 top-0 bottom-0 w-1/2">
               <img
                 src="/truffles-More_Cafe/coffee-hero.png"
                 alt="Coffee hero"
-                className="w-full h-full object-contain opacity-70"
+                className="w-full h-full object-contain"
               />
             </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/95 via-brand-light-pink/80 to-transparent" />
           </div>
         )}
         {currentSlide === 2 && (
@@ -150,16 +152,17 @@ return (
               <img
                 src={slides[2].image}
                 alt="Fresh Bakes Hero"
-                className="w-full h-full object-cover opacity-70"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute right-0 top-0 w-1/2 h-full flex items-center justify-end">
               <img
                 src={slides[2].image2}
                 alt="Ice cream"
-                className="w-1/2 h-3/4 object-contain opacity-70 mr-16"
+                className="w-1/2 h-3/4 object-contain mr-16"
               />
             </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/95 via-brand-light-pink/80 to-transparent" />
           </div>
         )}
         {currentSlide === 3 && (
@@ -168,16 +171,17 @@ return (
               <img
                 src={slides[3].image}
                 alt="Chocolate Cake Hero"
-                className="w-full h-full object-cover opacity-70"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute right-0 top-0 w-1/2 h-full flex items-center justify-end">
               <img
                 src={slides[3].image2}
                 alt="Coffee beans"
-                className="w-1/3 h-3/4 object-contain opacity-70 mr-16"
+                className="w-1/3 h-3/4 object-contain mr-16"
               />
             </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/95 via-brand-light-pink/80 to-transparent" />
           </div>
         )}
 
@@ -191,25 +195,25 @@ return (
               transition={{ duration: 0.3 }}
               className="max-w-lg text-center lg:text-left w-full"
             >
-              <h2 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-gold mb-2 sm:mb-3 font-bold">{slides[currentSlide].subheadline}</h2>
-              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight text-brand-off-white">
+              <h2 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-dark-mauve mb-2 sm:mb-3 font-semibold">{slides[currentSlide].subheadline}</h2>
+              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight text-brand-dark-mauve">
                 {slides[currentSlide].headline}
               </h1>
-              <p className="text-xs sm:text-sm text-brand-off-white mb-4 sm:mb-5 md:mb-6 max-w-[200px] sm:max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
+              <p className="text-xs sm:text-sm text-brand-dark-mauve mb-4 sm:mb-5 md:mb-6 max-w-[200px] sm:max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
                 {slides[currentSlide].content}
               </p>
 <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-3 justify-center lg:justify-start mb-4 sm:mb-5 md:mb-6">
               {slides[currentSlide].features?.map((feature, idx) => (
-                <span key={idx} className="px-3 py-1 bg-brand-gold/30 text-brand-off-white text-[10px] sm:text-xs font-semibold rounded-full">
+                <span key={idx} className="px-3 py-1 bg-brand-gold text-brand-dark-mauve text-[10px] sm:text-xs font-semibold rounded-full">
                   {feature}
                 </span>
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center lg:justify-start">
-                <Link to={slides[currentSlide].ctaLink} className="px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-brand-gold text-brand-dark-mauve rounded-full font-bold tracking-widest text-[10px] sm:text-xs hover:bg-brand-off-white transition-all shadow-lg">
+                <Link to={slides[currentSlide].ctaLink} className="px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-brand-dark-mauve text-white rounded-full font-bold tracking-widest text-[10px] sm:text-xs hover:bg-brand-gold hover:text-brand-dark-mauve transition-all shadow-lg">
                   {slides[currentSlide].ctaText}
                 </Link>
-                <Link to="/products" className="px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-white text-brand-dark-mauve border-2 border-white rounded-full font-bold tracking-widest text-[10px] sm:text-xs hover:bg-brand-gold hover:border-brand-gold hover:text-white transition-all shadow-lg">
+                <Link to="/products" className="px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-white text-brand-dark-mauve border-2 border-brand-dark-mauve rounded-full font-bold tracking-widest text-[10px] sm:text-xs hover:bg-brand-gold hover:border-brand-gold hover:text-white transition-all shadow-lg">
                   BUY NOW
                 </Link>
               </div>
