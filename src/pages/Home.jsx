@@ -10,7 +10,7 @@ const Home = () => {
 
 const slides = [
     {
-      image: "/truffles-More_Cafe/Images/hero_section.jpg",
+      image: "/truffles-More_Cafe/Images/Hero_Section.jpg",
       image2: "/truffles-More_Cafe/Images/cake_hero.png",
       heroBg: "/truffles-More_Cafe/Images/hero.jpg",
       headline: "Welcome to Truffles & More",
@@ -45,7 +45,7 @@ const slides = [
     {
       image: "/truffles-More_Cafe/Images/Chocolate Cake & Berry Dessert.jpg",
       image2: "/truffles-More_Cafe/Images/coffee_beans.png",
-      heroBg: "/truffles-More_Cafe/Images/hero_section.jpg",
+      heroBg: "/truffles-More_Cafe/Images/Hero_Section.jpg",
       headline: "Delight in every Bite!",
       subheadline: "Experience True Indulgence",
       content: "Every bite is a journey through the artisan streets of Paris, crafted with love and gold. Discover our range of luxuries cakes, artisan chocolates, and handcrafted beverages.",
