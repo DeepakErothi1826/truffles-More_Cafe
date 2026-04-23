@@ -15,7 +15,7 @@ export default {
         'cream': '#F9EDD9',
       },
       fontFamily: {
-        script: ['Pinyon Script', 'cursive'],
+        script: ['Mirabelle', 'cursive'],
         serif: ['Playfair Display', 'serif'],
         sans: ['Montserrat', 'sans-serif'],
       },
