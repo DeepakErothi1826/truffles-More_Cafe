@@ -130,7 +130,7 @@ return (
         {/* Dark overlay for text visibility */}
         <div className="absolute inset-0 bg-black/60 z-0"></div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-10 pt-16 sm:pt-20 md:pt-24 lg:pt-28">
           <div className="w-full max-w-2xl mx-auto lg:mx-0 lg:max-w-xl">
             {/* Subheadline */}
             <p className="text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-gold mb-3 sm:mb-4 md:mb-5 font-bold text-center lg:text-left">
