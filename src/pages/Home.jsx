@@ -195,22 +195,22 @@ return (
               transition={{ duration: 0.5, delay: 0.1 }}
               className="max-w-lg text-center lg:text-left w-full"
             >
-              <h2 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] text-white mb-2 sm:mb-3 font-light">{slides[currentSlide].subheadline}</h2>
-              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight text-white">
+              <h2 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-gold mb-2 sm:mb-3 font-bold">{slides[currentSlide].subheadline}</h2>
+              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-script mb-3 sm:mb-4 md:mb-5 leading-tight text-brand-off-white">
                 {slides[currentSlide].headline}
               </h1>
-              <p className="text-xs sm:text-sm text-white/90 mb-4 sm:mb-5 md:mb-6 max-w-[200px] sm:max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
+              <p className="text-xs sm:text-sm text-brand-off-white/90 mb-4 sm:mb-5 md:mb-6 max-w-[200px] sm:max-w-md lg:max-w-lg mx-auto lg:ml-auto leading-relaxed">
                 {slides[currentSlide].content}
               </p>
 <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-3 justify-center lg:justify-start mb-4 sm:mb-5 md:mb-6">
               {slides[currentSlide].features?.map((feature, idx) => (
-                <span key={idx} className="px-3 py-1 bg-white/20 text-white text-xs font-semibold rounded-full">
+                <span key={idx} className="px-3 py-1 bg-brand-gold/30 text-brand-off-white text-[10px] sm:text-xs font-semibold rounded-full backdrop-blur-sm">
                   {feature}
                 </span>
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center lg:justify-start">
-                <Link to={slides[currentSlide].ctaLink} className="px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-white text-brand-dark-mauve rounded-full font-bold tracking-widest text-[10px] sm:text-xs hover:bg-brand-gold hover:text-white transition-all shadow-lg">
+                <Link to={slides[currentSlide].ctaLink} className="px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-brand-dark-mauve text-white rounded-full font-bold tracking-widest text-[10px] sm:text-xs hover:bg-brand-gold transition-all shadow-lg">
                   {slides[currentSlide].ctaText}
                 </Link>
                 <Link to="/products" className="px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-transparent text-white border-2 border-white rounded-full font-bold tracking-widest text-[10px] sm:text-xs hover:bg-white hover:text-brand-dark-mauve transition-all shadow-lg">
