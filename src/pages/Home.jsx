@@ -10,8 +10,8 @@ const Home = () => {
 
 const slides = [
     {
-      image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
-      image2: "/truffles-More_Cafe/coffee-hero.png",
+      image: "/truffles-More_Cafe/Images/Hero_Section.jpg",
+      image2: "/truffles-More_Cafe/Images/cake_hero.png",
       headline: "Welcome to Truffles & More",
       subheadline: "Artisan Bakery & Coffee House",
       content: "We are passionate artisans crafting exquisite desserts with love since 2010. From handcrafted cakes to delicate macarons, every bite tells a story of dedication and perfection.",
@@ -20,7 +20,7 @@ const slides = [
       ctaLink: "/about"
     },
     {
-      image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
+      image: "/truffles-More_Cafe/Images/Chocolate Truffle Cupcake - Gold Hazelnut Luxury.jpg",
       image2: "/truffles-More_Cafe/coffee-hero.png",
       headline: "Handcrafted Perfection",
       subheadline: "Baked with Passion",
@@ -30,8 +30,8 @@ const slides = [
       ctaLink: "/products"
     },
     {
-      image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
-      image2: "/truffles-More_Cafe/coffee-hero.png",
+      image: "/truffles-More_Cafe/Images/Simple and Creative Birthday Cake Decorating Ideas You Can Try at Home.jpg",
+      image2: "/truffles-More_Cafe/Images/icecream_hero.png",
       headline: "Fresh Daily Bakes",
       subheadline: "Baked Fresh Every Morning",
       content: "Wake up to the aroma of freshly baked goods. Our pastries, breads, and cakes are made fresh each morning using time-honored recipes and the finest ingredients.",
@@ -40,8 +40,8 @@ const slides = [
       ctaLink: "/products"
     },
     {
-      image: "/truffles-More_Cafe/Images/side_coffee_Hero.png",
-      image2: "/truffles-More_Cafe/coffee-hero.png",
+      image: "/truffles-More_Cafe/Images/Chocolate Cake & Berry Dessert.jpg",
+      image2: "/truffles-More_Cafe/Images/coffee_beans.png",
       headline: "Delight in every Bite!",
       subheadline: "Experience True Indulgence",
       content: "Every bite is a journey through the artisan streets of Paris, crafted with love and gold. Discover our range of luxuries cakes, artisan chocolates, and handcrafted beverages.",
@@ -116,44 +116,72 @@ return (
     <div className="relative overflow-hidden bg-brand-light-pink min-h-screen">
       {/* Hero Slider Section */}
       <section className="relative min-h-[60vh] md:h-[70vh] overflow-hidden">
-        {/* Background Images - only show for slides 1,2,3 */}
-        {currentSlide !== 0 && currentSlide < 2 && (
-          <div className="absolute inset-0 z-0 pointer-events-none">
-            {currentSlide !== 1 && (
-              <div className="absolute -left-10 top-0 w-1/2 h-full">
-                <img
-                  src={slides[currentSlide].image}
-                  alt="Truffles&More Coffee Hero"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-            {currentSlide === 1 ? (
-              <>
-                <div className="absolute right-0 top-0 bottom-0 w-1/2" style={{ transform: 'translateX(-20%)' }}>
-                  <img
-                    src="/truffles-More_Cafe/coffee-hero.png"
-                    alt="Coffee hero"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div className="absolute right-0 top-0 bottom-0 w-1/2" style={{ transform: 'translateX(20%)' }}>
-                  <img
-                    src="/truffles-More_Cafe/Images/coffee-right-side.png"
-                    alt="Coffee right"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </>
-            ) : (
-              <div className="absolute right-0 top-0 w-1/2 h-full flex items-center justify-end">
-                <img
-                  src={slides[currentSlide].image2}
-                  alt="Coffee img"
-                  className="w-1/2 h-3/4 object-contain mr-32"
-                />
-              </div>
-            )}
+        {/* Background Images for each slide */}
+        {currentSlide === 0 && (
+          <div className="absolute inset-0 z-0">
+            <img
+              src={slides[0].image}
+              alt="Hero"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/90 via-brand-light-pink/70 to-transparent" />
+          </div>
+        )}
+        {currentSlide === 1 && (
+          <div className="absolute inset-0 z-0 flex">
+            <div className="absolute left-0 top-0 bottom-0 w-1/2">
+              <img
+                src={slides[1].image}
+                alt="Cupcake Hero"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute right-0 top-0 bottom-0 w-1/2">
+              <img
+                src="/truffles-More_Cafe/coffee-hero.png"
+                alt="Coffee hero"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/90 via-brand-light-pink/60 to-transparent" />
+          </div>
+        )}
+        {currentSlide === 2 && (
+          <div className="absolute inset-0 z-0 flex">
+            <div className="absolute left-0 top-0 w-1/2 h-full">
+              <img
+                src={slides[2].image}
+                alt="Fresh Bakes Hero"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute right-0 top-0 w-1/2 h-full flex items-center justify-end">
+              <img
+                src={slides[2].image2}
+                alt="Ice cream"
+                className="w-1/2 h-3/4 object-contain mr-16"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/90 via-brand-light-pink/60 to-transparent" />
+          </div>
+        )}
+        {currentSlide === 3 && (
+          <div className="absolute inset-0 z-0 flex">
+            <div className="absolute left-0 top-0 w-1/2 h-full">
+              <img
+                src={slides[3].image}
+                alt="Chocolate Cake Hero"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute right-0 top-0 w-1/2 h-full flex items-center justify-end">
+              <img
+                src={slides[3].image2}
+                alt="Coffee beans"
+                className="w-1/3 h-3/4 object-contain mr-16"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-light-pink/90 via-brand-light-pink/60 to-transparent" />
           </div>
         )}
 
