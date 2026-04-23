@@ -183,7 +183,7 @@ return (
         </button>
 
 {/* Slide Indicators */}
-        <div className="absolute bottom-8 sm:bottom-10 md:bottom-12 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
+        <div className="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
           {slides.map((_, idx) => (
             <button
               key={idx}
