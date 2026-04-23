@@ -207,8 +207,8 @@ return (
           <ChevronRight className="w-6 h-6 text-brand-dark-mauve" />
         </button>
 
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
+{/* Slide Indicators */}
+        <div className="absolute bottom-12 sm:bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
           {slides.map((_, idx) => (
             <button
               key={idx}
